@@ -30,10 +30,6 @@ jobs:
       - name: Get package version number
         id: package-version
         uses: martinbeentjes/npm-get-version-action@master
-
-      - name: Get git commit SHA
-        id: git-commit-sha
-        run: echo "::set-output name=sha::$(git rev-parse HEAD)"
       
       - name: Tag new version
         uses: pkgdeps/action-package-version-to-git-tag@v1.5.0
@@ -42,5 +38,4 @@ jobs:
           git_tag_prefix: "v"
           github_token: ${{ env.PAT_GITHUB_TOKEN }}
           github_repo: ${{ github.repository }}
-          git_commit_sha: ${{ steps.git-commit-sha.outputs.sha }}
-
+          git_commit_sha: ${{ github.sha }}
