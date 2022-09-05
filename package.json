@@ -1,0 +1,18 @@
+{
+  "name": "wbnumber",
+  "version": "0.1.0",
+  "description": "Helper class for bignumber.js usage with decimals",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "author": "zlumer",
+  "license": "MIT",
+  "scripts": {
+	"build": "tsc"
+  },
+  "dependencies": {
+    "bignumber.js": "^9.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.8.2"
+  }
+}
