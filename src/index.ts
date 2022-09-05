@@ -22,7 +22,7 @@ export const ethToWei = (eth: NumberLike, decimals: number) =>
 export const weiToEth = (wei: NumberLike, decimals: number) =>
 	bn(wei).dividedBy(_decimals(decimals))
 
-export class WBN
+export default class WBN
 {
 	public wei: BigNumber
 
